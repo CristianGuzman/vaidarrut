@@ -37,7 +37,7 @@ function checkRut(rut) {
     
     // Casos Especiales (0 y K)
     dv = (dv == 'K')?10:dv;
-    dv = (dv == 11)?0:dv;
+    dv = (dv == 0)?11:dv;
     
     // Validar que el Cuerpo coincide con su Dígito Verificador
     if(dvEsperado != dv) { rut.setCustomValidity("RUT Inválido"); return false; }
